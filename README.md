@@ -1,10 +1,6 @@
 # Weather Or Not
 
-This project is to develop a website for the artist Adamma Anwen Lloyd, with the goal of showcasing her work and attracting potential clients or buyers. We aim to include a gallery page with high-quality images of her work, an about the artist page and a contact form for enquiries or purchases. 
-
-As far as the user is concerned, they should be able to view Adamma's work and contact her for any commissions or purchases. This should be covered within our intended site.
-
-In terms of design, there should be a cohesive colour scheme and set of styles across the whole site to reiterate the artist's brand. Site layout should enhance rather than impede the user experience to give a welcoming, intuitive feel. Finally, the site layout should be responsive to enable easy navigation on all devices.
+Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that provides Users with live weather data and forecast data. It demonstrates manipulating DOM elements with JSON from an open API. It demonstrates core Javascript that is uses to add functionality to the site. In addition, it also utilises core bootstrap, css, and HTML in regards to design.
 
 <img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/142e1d42-da4d-4aba-a683-342923bc8e1e" style="width:70%;">
 
@@ -30,12 +26,12 @@ In terms of design, there should be a cohesive colour scheme and set of styles a
 <a id="user-stories"></a>
 ## User Stories
 
-- 
-  - 
-- 
-  - 
-- 
-  - 
+- As a User, I can search for the weather using a city name
+  - There is a clearly visible search bar for the user to enter their desired city, and an assocaited search button. (They can also press enter to search)
+- As a User, I can search for the weather using my current location
+  - There is a "Use my location" button that will provide a pop up asking the user to allow the use of their devices geolocation
+- As a User, I can see the forcasted weather for my searched city or my location for 5 days and the current day.
+  - There is a 
 - 
   - 
 - 
@@ -51,13 +47,22 @@ The project backlog contains several "Could-Have" user stories and two "Won't Ha
 <a id="features"></a>
 ## Features
 
-- **Navigation Bar**
-
-Navigation is provided via a bootstrap navbar. CSS code has been added to underline menu items on hover and tint the navbar for each page. Font Awesome icons have been added to each menu item to add visual clues.
+- **Search Bar**
+The User can instead, enter their own custom location into the Input. Once they click search, the weather API will return weather data for that location.
 
 <img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/6278e0e9-371f-4190-8527-9988f7a4d5c4" style="width:70%;">
 
-- **The Footer**
+- **User Location Button**
+The User can click the current location button which uses the Geolocation API, the browser will then ask the User permission to access their device's location. Once that is accepted, the weather results shown will be for that location - using latitude and longitude of the User's device.
+
+- **Live Weather**
+When the User submits a search - current or custom location - the app will display a live weather container. This live weather will have key information about the location. This includes Temperature, Humidity, Wind Speed, Sunrise, Sunset and a description of the weather e.g Cloudy.
+
+- **Five Day Forecast**
+In addition to live weather, the User will receive Forecasted Weather for that location. It will provide the User with the next 6 days of weather information - combined with live weather, totals to 7 day weather data. The Forecasted Weather prediction will have minimal but crucial information - date, temperature and weather description.
+
+- **Footer?**
+
 
 
 
