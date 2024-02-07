@@ -22,9 +22,10 @@ In terms of design, there should be a cohesive colour scheme and set of styles a
 ## UX Design
 
 ### Home Page Wireframe Design
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/7a577631-48c3-41e1-b3ff-28ff473ac2f0" style="width:70%;">
+<img src="assets/readmePhotos/wireframeLaptop.png" style="width:80%;">
+<img src="assets/readmePhotos/wireframePhone.png" style="width:40%;">
 
-xxxxx
+
 
 <a id="user-stories"></a>
 ## User Stories
@@ -120,7 +121,7 @@ All bug fixes were dealt with efficiently and cleanly.
 
 ### Media
 
-- 
+- Favicon: we generated the image using AI IDDLE (CHAT GPT) and we formatted it with the website [_favicon.io_](https://favicon.io/favicon-converter/#google_vignette)
 
 - 
 
