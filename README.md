@@ -24,7 +24,7 @@ In terms of design, there should be a cohesive colour scheme and set of styles a
 ### Home Page Wireframe Design
 <img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/7a577631-48c3-41e1-b3ff-28ff473ac2f0" style="width:70%;">
 
-
+xxxxx
 
 <a id="user-stories"></a>
 ## User Stories
