@@ -31,12 +31,13 @@
     <div class="container-fluid my-4 weather-data">
       <div class="row">
         <div class="col-xxl-3 col-md-4 px-lg-4">
-          <h5 class="fw-bold">Enter a City Name</h5>
+          <h5 class="fw-bold text-center">Enter a City Name</h5>
           <input type="text" id="city-input" class="py-2 form-control" placeholder="E.g., New York, London, Tokyo">
           <button id="search-btn" class="btn btn-success py-2 w-100 mt-3 mb-2">Search</button>
           <div class="separator"></div>
           <button id="userlocation-btn" class="btn btn-success py-2 w-100 mt-3 mb-2">Use Current Location</button>
         </div>
+        
         <div class="col-xxl-9 col-md-8 mt-md-1 mt-4 pe-lg-4" id="weatherSection">
           <div class="current-weather bg-success text-white py-2 px-4 rounded-3">
             <div class="mt-3 d-flex justify-content-between">
@@ -48,7 +49,7 @@
               </div>
           </div>
           </div>
-          <h4 class="fw-bold my-4">5-Day Forecast</h4>
+          <h4 class="fw-bold my-4 text-center">5-Day Forecast</h4>
           <div class="days-forecast row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-5 justify-content-between">
             <div class="col mb-3">
               <div class="card border-0 bg-secondary text-white">
@@ -102,6 +103,21 @@
             </div>
           </div>
         </div>
+        <!--Previous History List -->
+        <div class="container-fluid my-4 weather-data">
+          <div class="row">
+            <div class="col-xxl-3 col-md-4 px-lg-4">
+              <div>
+                <h5 class="fw-bold card border-0 bg-success text-center text-white">Previous searches</h5>
+              </div>
+              <div id="searchHistory" class="container mt-4">
+                <ul id="searchList" class="list-unstyled list-group">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </body>
