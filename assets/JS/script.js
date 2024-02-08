@@ -28,7 +28,10 @@ const createWeatherCard = (cityName, weatherItem, index) => {
                     <div class="card border-0 bg-secondary text-white">
                         <div class="card-body p-3 text-white forecast-wrap">
                             <h5 class="card-title fw-semibold text-center">(${weatherItem.dt_txt.split(" ")[0]})</h5>
+                            <h6>${weatherItem.weather[0].description}</h6>
                             <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}.png" class="rounded mx-auto d-block" alt="weather icon">
+                        </div>
+                        <div class="card-body p-3 text-white"> 
                             <h6 class="card-text my-3 mt-3 text-center">Temp: ${((weatherItem.main.temp - 273.15).toFixed(2))}°C</h6>
                             <h6 class="card-text my-3 text-center">Wind: ${weatherItem.wind.speed} M/S</h6>
                             <h6 class="card-text my-3 text-center">Humidity: ${weatherItem.main.humidity}%</h6>
@@ -75,15 +78,16 @@ const getCityCoordinates = () => {
     const API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
   
     fetch(API_URL).then(response => response.json()).then(data => {
-        if (!data.length) return alert(`No coordinates found for ${cityName}`);
+        if (!data.length) return alert(`No coordinates found for ${cityName}, please check you spelling and try again.`);
         const { lat, lon, name } = data[0];
         getWeatherDetails(name, lat, lon);
         addCityToList();
     }).catch(() => {
         alert("An error occurred while fetching the coordinates!");
     });
+    removeHome()
 }
-
+// Gets User coords using built in navigator.geolocation.getCurrentPosition and uses the location information to call the API and add to the other relevant functions
 const getUserCoordinates = () => {
     navigator.geolocation.getCurrentPosition(
         position => {
@@ -105,6 +109,7 @@ const getUserCoordinates = () => {
                 alert("Geolocation request error. Please reset location permission.");
             }
         });
+    removeHome()
 }
 
 // Function to add city to the list
@@ -112,19 +117,47 @@ function addCityToList() {
     // Get the text from the city search box
     var name = document.getElementById("city-input").value;
 
+    var list = document.querySelectorAll(".list-group-item");
+
+
     // Check if the input is not empty
     if (name.trim() !== "") {
+        
+       
         // Create a new list item
         var newListItem = document.createElement("li");
-        newListItem.className = "list-group-item";
-        newListItem.textContent = name;
-
+        newListItem.className = "list-group-item card border-0 bg-secondary text-white mt-3";
+       // Create capitalised version of the city name
+        var lowerName = name.toLowerCase();
+        var capName = lowerName.charAt(0).toUpperCase() + lowerName.slice(1);
+        newListItem.textContent = capName;
+        
+        // Create an empty array to be filled with list items innerHTML
+        var listArray=[];
+        // Check if list item array
+        if(listArray !== "") {
+            for (var i=0;i<list.length;i++){
+                listArray.push(list[i].innerHTML);
+        }
+        
         // Get reference to the existing ul
         var searchListUl = document.getElementById("searchList");
 
         // Append the new list item to the existing ul
-        searchListUl.appendChild(newListItem);
+        if(!listArray.includes(capName)) {
+            
+
+            searchListUl.appendChild(newListItem);
+            
+        }
     }
+    }
+}
+
+const removeHome = () => {
+    mainWeatherSection.classList.remove('d-none');
+    searchHistoryContainer.classList.remove('d-none');
+    homePage.classList.add('d-none');
 }
 
 //Add event listener

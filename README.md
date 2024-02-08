@@ -18,8 +18,8 @@ Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that prov
 ## UX Design
 
 ### Home Page Wireframe Design
-<img src="assets/readmePhotos/wireframeLaptop.png" style="width:80%;">
-<img src="assets/readmePhotos/wireframePhone.png" style="width:40%;">
+<img src="assets/images/readmePhotos/wireframeLaptop.png" style="width:80%;">
+<img src="assets/images/readmePhotos/wireframePhone.png" style="width:40%;">
 
 
 

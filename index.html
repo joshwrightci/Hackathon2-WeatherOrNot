@@ -36,9 +36,13 @@
           <button id="search-btn" class="btn btn-success py-2 w-100 mt-3 mb-2">Search</button>
           <div class="separator"></div>
           <button id="userlocation-btn" class="btn btn-success py-2 w-100 mt-3 mb-2">Use Current Location</button>
-        </div>
-        
-        <div class="col-xxl-9 col-md-8 mt-md-1 mt-4 pe-lg-4" id="weatherSection">
+        </div>   
+        <div class="col-xxl-9 col-md-8 mt-md-1 mt-4 pe-lg-4 text-center" id="homePage">
+          <h1 class="mt-4">Welcome To Our Weather App</h1>
+          <h2>Please enter a City name in the search bar or click the "Use Current Location" button to receive the current weather and a four day forecast</h2>
+          <div class="mt-5"><img class="homeImage" src="assets/images/home/Four_Seasons.jpg" alt=""></div>
+        </div>        
+        <div class="col-xxl-9 col-md-8 mt-md-1 mt-4 pe-lg-4 d-none" id="weatherSection">
           <div class="current-weather bg-success text-white py-2 px-4 rounded-3">
             <div class="mt-3 d-flex justify-content-between">
               <div>
@@ -91,20 +95,11 @@
                 </div>
               </div>
             </div>
-            <div class="col mb-3">
-              <div class="card border-0 bg-secondary text-white">
-                <div class="card-body p-3 text-white">
-                  <h5 class="card-title fw-semibold">( ______ )</h5>
-                  <h6 class="card-text my-3 mt-3">Temp: __°C</h6>
-                  <h6 class="card-text my-3">Wind: __ M/S</h6>
-                  <h6 class="card-text my-3">Humidity: __%</h6>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
         <!--Previous History List -->
-        <div class="container-fluid my-4 weather-data">
+        <div class="container-fluid my-4 weather-data d-none" id="searchHistoryContainer">
           <div class="row">
             <div class="col-xxl-3 col-md-4 px-lg-4">
               <div>
@@ -117,7 +112,7 @@
             </div>
           </div>
         </div>
-
+        <!--/Previous History-->
       </div>
     </div>
   </body>

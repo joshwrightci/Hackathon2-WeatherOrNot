@@ -8,6 +8,10 @@
   margin-top: -15px;
 }
 
+.homeImage {
+  max-width: 400px;
+}
+
 .forecast-wrap {
   text-wrap: pretty;
 }
