@@ -161,10 +161,13 @@ function addCityToList(name) {
         // Append the new list item to the existing ul
         if(!listArray.includes(capName)) {
             searchListUl.appendChild(newListItem);
+            searchListUl.classList.add("text-center");
         }
         }
     }
 }
+
+// A function that removes or adds the d-none class to hide the homepage section and reveal  the weather section
 
 const removeHome = () => {
     mainWeatherSection.classList.remove('d-none');
@@ -173,10 +176,18 @@ const removeHome = () => {
     homePage.classList.add('d-none');
 }
 
+// Add function that takes the relevant city latitude and longitude coordinates 
+// and passes them into a template literal that is then inserted into the innerhtml or the map div.
 
+function addMapCoord (lat,lon) {
+    const mapHTML= `<gmp-map center="${lat},${lon}" zoom="14" map-id="DEMO_MAP_ID">
+        <gmp-advanced-marker position="${lat},${lon}" title="My location"></gmp-advanced-marker>
+        </gmp-map>`;
+        MapLocationDiv.innerHTML=mapHTML;
+}
 
 //Add event listener
-// searchButton.addEventListener("click", () => getCityCoordinates());
+
 
 userLocationButton.addEventListener("click", getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
@@ -185,9 +196,3 @@ cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates
 
 
 
-function addMapCoord (lat,lon) {
-    const mapHTML= `<gmp-map center="${lat},${lon}" zoom="14" map-id="DEMO_MAP_ID">
-        <gmp-advanced-marker position="${lat},${lon}" title="My location"></gmp-advanced-marker>
-        </gmp-map>`;
-        MapLocationDiv.innerHTML=mapHTML;
-}
