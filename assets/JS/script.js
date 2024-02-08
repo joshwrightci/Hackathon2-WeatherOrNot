@@ -25,10 +25,10 @@ const createWeatherCard = (cityName, weatherItem, index) => {
                 </div>`;
     } else {
         return `<div class="col mb-3">
-                    <div class="card border-0 bg-secondary text-white">
-                        <div class="card-body p-3 text-white forecast-wrap">
+                    <div class="card border-0 bg-secondary text-white forecast-wrap">
+                        <div class="card-body p-3 text-white">
                             <h5 class="card-title fw-semibold text-center">(${weatherItem.dt_txt.split(" ")[0]})</h5>
-                            <h6>${weatherItem.weather[0].description}</h6>
+                            <h6 class="card-text text-center">${weatherItem.weather[0].description}</h6>
                             <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}.png" class="rounded mx-auto d-block" alt="weather icon">
                         </div>
                         <div class="card-body p-3 text-white"> 
