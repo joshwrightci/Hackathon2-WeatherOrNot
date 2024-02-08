@@ -6,6 +6,8 @@ const currentWeatherDiv = document.querySelector(".current-weather");
 const daysForecastDiv = document.querySelector(".days-forecast");
 const API_KEY = "045a0084a08118b8ad2136beb78579bf"; //Ellis' API KEY use for TESTING ONLY
 
+
+
 // Create weather card HTML based on weather data
 const createWeatherCard = (cityName, weatherItem, index) => {
     if(index === 0) {
