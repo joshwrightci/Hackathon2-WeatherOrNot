@@ -10,6 +10,9 @@ const API_KEY = "045a0084a08118b8ad2136beb78579bf"; //Ellis' API KEY use for TES
 
 // Create weather card HTML based on weather data
 const createWeatherCard = (cityName, weatherItem, index) => {
+    var description = weatherItem.weather[0].description
+    description = description.charAt(0).toUpperCase() + description.slice(1);
+
     if(index === 0) {
         return `<div class="mt-3 d-flex justify-content-between">
                     <div>
@@ -28,7 +31,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
                     <div class="card border-0 bg-secondary text-white forecast-wrap">
                         <div class="card-body p-3 text-white">
                             <h5 class="card-title fw-semibold text-center">(${weatherItem.dt_txt.split(" ")[0]})</h5>
-                            <h6 class="card-text text-center">${weatherItem.weather[0].description}</h6>
+                            <h6 class="card-text text-center">${description}</h6>
                             <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}.png" class="rounded mx-auto d-block" alt="weather icon">
                         </div>
                         <div class="card-body p-3 text-white"> 
@@ -145,12 +148,9 @@ function addCityToList() {
 
         // Append the new list item to the existing ul
         if(!listArray.includes(capName)) {
-            
-
             searchListUl.appendChild(newListItem);
-            
         }
-    }
+        }
     }
 }
 
