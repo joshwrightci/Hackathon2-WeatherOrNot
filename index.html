@@ -41,10 +41,10 @@
           <button id="userlocation-btn" class="btn btn-success py-2 w-100 mt-3 mb-2">Use Current Location</button>
 
           
-          <div class="mt-3" id="map"></div>
-          <gmp-map center="35.652832,139.839478" zoom="14" map-id="DEMO_MAP_ID">
+          
+          <!-- <gmp-map center="35.652832,139.839478" zoom="14" map-id="DEMO_MAP_ID">
             <gmp-advanced-marker position="35.652832,139.839478" title="My location"></gmp-advanced-marker>
-          </gmp-map>
+          </gmp-map> -->
           
 
         </div>   
@@ -110,8 +110,9 @@
         </div>
         <!--Previous History List -->
         <div class="container-fluid weather-data d-none" id="searchHistoryContainer">
-          <div class="row">
-            <div class="col-xxl-3 col-md-4 px-lg-4">
+          <div class="row pt-4 pb-4">
+            <div class="col-xxl-3">
+              
               <div>
                 <h5 class="fw-bold card border-0 bg-success text-center text-white">Previous searches</h5>
               </div>
@@ -119,6 +120,9 @@
                 <ul id="searchList" class="list-unstyled list-group">
                 </ul>
               </div>
+            </div>
+            <div class="col-xxl-9" id="map">
+
             </div>
           </div>
         </div>

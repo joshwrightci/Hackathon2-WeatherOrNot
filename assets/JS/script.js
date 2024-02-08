@@ -90,8 +90,8 @@ const getCityCoordinates = () => {
         getWeatherDetails(name, lat, lon);
         addCityToList();        
        
-    //    MapLocationDiv.innerHTML = "";
-    //     addMapCoord (lat,lon);
+       MapLocationDiv.innerHTML = "";
+        addMapCoord (lat,lon);
 
     }).catch(() => {
         alert("An error occurred while fetching the coordinates!");
