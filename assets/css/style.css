@@ -52,6 +52,7 @@ main {
   flex: 1; /* Allow main content to expand to fill remaining space */
 }
 
+
 footer {
 position: fixed;
 bottom: 0;
