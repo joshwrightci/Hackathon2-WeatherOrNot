@@ -109,6 +109,10 @@ const getUserCoordinates = () => {
                 const { name } = data[0];
                 getWeatherDetails(name, latitude, longitude);
                 addCityToList(name);
+                var lat = latitude;
+                var lon = longitude;
+                MapLocationDiv.innerHTML = "";
+                addMapCoord (lat,lon);
             }).catch(() => {
                 alert("An error occurred while fetching the city name!");
             });
