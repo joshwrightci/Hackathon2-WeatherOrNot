@@ -1,6 +1,7 @@
 const MapLocationDiv = document.getElementById("map");
 
 const mainWeatherSection = document.querySelector("#weatherSection");
+const mainWeatherSection2 = document.querySelector("#weatherSection2");
 const cityInput = document.querySelector("#city-input");
 const searchButton = document.querySelector("#search-btn");
 const userLocationButton = document.querySelector("#userlocation-btn");
@@ -167,6 +168,7 @@ function addCityToList(name) {
 
 const removeHome = () => {
     mainWeatherSection.classList.remove('d-none');
+    mainWeatherSection2.classList.remove('d-none');
     searchHistoryContainer.classList.remove('d-none');
     homePage.classList.add('d-none');
 }
