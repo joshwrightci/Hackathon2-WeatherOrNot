@@ -13,11 +13,12 @@ const API_KEY = "045a0084a08118b8ad2136beb78579bf"; //Ellis' API KEY use for TES
 const createWeatherCard = (cityName, weatherItem, index) => {
     var description = weatherItem.weather[0].description
     description = description.charAt(0).toUpperCase() + description.slice(1);
+    var dateText = new Date(weatherItem.dt_txt).toDateString(); //use dateText for date formatting options instead of dt_txt returned from API
 
     if(index === 0) {
         return `<div class="mt-3 d-flex justify-content-between">
                     <div>
-                        <h3 class="fw-bold text-center">${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h3>
+                        <h3 class="fw-bold text-center">${cityName} (${dateText})</h3>
                         <h6 class="my-3 mt-3 text-center">Temperature: ${((weatherItem.main.temp - 273.15).toFixed(2))}°C</h6>
                         <h6 class="my-3 text-center">Wind: ${weatherItem.wind.speed} M/S</h6>
                         <h6 class="my-3 text-center">Humidity: ${weatherItem.main.humidity}%</h6>
@@ -52,7 +53,7 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
         const forecastArray = data.list;
         const uniqueForecastDays = new Set();
         const fiveDaysForecast = forecastArray.filter(forecast => {
-            const forecastDate = new Date(forecast.dt_txt).getDate();
+            const forecastDate = new Date(forecast.dt_txt);
             if (!uniqueForecastDays.has(forecastDate) && uniqueForecastDays.size < 6) {
                 uniqueForecastDays.add(forecastDate);
                 return true;
