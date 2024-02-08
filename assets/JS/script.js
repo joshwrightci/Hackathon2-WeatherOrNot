@@ -13,10 +13,10 @@ const createWeatherCard = (cityName, weatherItem, index) => {
     if(index === 0) {
         return `<div class="mt-3 d-flex justify-content-between">
                     <div>
-                        <h3 class="fw-bold">${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h3>
-                        <h6 class="my-3 mt-3">Temperature: ${((weatherItem.main.temp - 273.15).toFixed(2))}°C</h6>
-                        <h6 class="my-3">Wind: ${weatherItem.wind.speed} M/S</h6>
-                        <h6 class="my-3">Humidity: ${weatherItem.main.humidity}%</h6>
+                        <h3 class="fw-bold text-center">${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h3>
+                        <h6 class="my-3 mt-3 text-center">Temperature: ${((weatherItem.main.temp - 273.15).toFixed(2))}°C</h6>
+                        <h6 class="my-3 text-center">Wind: ${weatherItem.wind.speed} M/S</h6>
+                        <h6 class="my-3 text-center">Humidity: ${weatherItem.main.humidity}%</h6>
                     </div>
                     <div class="text-center me-lg-5">
                         <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather icon">
@@ -26,12 +26,12 @@ const createWeatherCard = (cityName, weatherItem, index) => {
     } else {
         return `<div class="col mb-3">
                     <div class="card border-0 bg-secondary text-white">
-                        <div class="card-body p-3 text-white">
-                            <h5 class="card-title fw-semibold">(${weatherItem.dt_txt.split(" ")[0]})</h5>
-                            <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}.png" alt="weather icon">
-                            <h6 class="card-text my-3 mt-3">Temp: ${((weatherItem.main.temp - 273.15).toFixed(2))}°C</h6>
-                            <h6 class="card-text my-3">Wind: ${weatherItem.wind.speed} M/S</h6>
-                            <h6 class="card-text my-3">Humidity: ${weatherItem.main.humidity}%</h6>
+                        <div class="card-body p-3 text-white forecast-wrap">
+                            <h5 class="card-title fw-semibold text-center">(${weatherItem.dt_txt.split(" ")[0]})</h5>
+                            <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}.png" class="rounded mx-auto d-block" alt="weather icon">
+                            <h6 class="card-text my-3 mt-3 text-center">Temp: ${((weatherItem.main.temp - 273.15).toFixed(2))}°C</h6>
+                            <h6 class="card-text my-3 text-center">Wind: ${weatherItem.wind.speed} M/S</h6>
+                            <h6 class="card-text my-3 text-center">Humidity: ${weatherItem.main.humidity}%</h6>
                         </div>
                     </div>
                 </div>`;
@@ -107,24 +107,6 @@ const getUserCoordinates = () => {
         });
 }
 
-/*
-Function needs to take the city name, add it to a array. Take in the HTML for the li & output the array object at index0,1,2,3,4,5 etc replacing the li html
-*/
-const presentPreviousHistory = () => {
-    //Get city name
-    let cityName = city.value.trim();
-    //List for  previous city names
-    let citylist = [];
-    //Add searched for city name to list
-    citylist = citylist.push(cityName);
-    console.log(citylist);
-
-    //Get Search History names, run a loop for every object in array & output the content
-    Array.from(previousSearchHistory).forEach(function(previousSearchHistory) {
-        console.log(previousSearchHistory.textContent);
-    });
-}
-
 // Function to add city to the list
 function addCityToList() {
     // Get the text from the city search box
@@ -145,12 +127,9 @@ function addCityToList() {
     }
 }
 
-
-
 //Add event listener
 // searchButton.addEventListener("click", () => getCityCoordinates());
 
 userLocationButton.addEventListener("click", getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
 cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
-// presentPreviousHistory();
