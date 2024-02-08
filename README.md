@@ -18,8 +18,8 @@ Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that prov
 ## UX Design
 
 ### Home Page Wireframe Design
-<img src="assets/images/readmePhotos/wireframeLaptop.png" style="width:80%;">
-<img src="assets/images/readmePhotos/wireframePhone.png" style="width:40%;">
+<img src="assets/images/readmePhotos/wireframeLaptop.png" style="width:60%;">
+<img src="assets/images/readmePhotos/wireframePhone.png" style="width:30%;">
 
 
 
@@ -39,10 +39,9 @@ Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that prov
 - 
   - 
 
-As can be seen from the project board, the completed sprint was composed of 17 separate items. Having used the MoSCoW approach to prioritisation, 10 were classified as "Must-Have" making up less than 60% of the tasks as recommended. The rest of the first sprint was made up of "Should-Have", "Could-Have" and bug fixes.
-The project backlog contains several "Could-Have" user stories and two "Won't Have" items.
+As can be seen from the project board, the sprint was composed of 14 separate items. Having used the MoSCoW approach to prioritisation, 8 were classified as "Must-Have" making up less than 60% of the tasks as recommended. The rest of the first sprint was made up of "Should-Have", "Nice to Have".
 
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/cea3c3e8-7df9-4fb9-8418-7d43bef02a95" style="width:100%;">
+<img src="assets/images/readmePhotos/gitBoard.png" style="width:100%;">
 
 <a id="features"></a>
 ## Features
@@ -151,11 +150,17 @@ All bug fixes were dealt with efficiently and cleanly.
 
 There are various features and user stories that we were not able to implement due to time constraints, but would be added in future iterations of the website.
 
-- Interactive Map that shows your current search geographical location 
-- Change the backgroung colour based on the temperature of the forecast
+- Interactive Map that shows your current search geographical location.
+
+- Make previous search clickable to allow the users visit the weather information of their previous searches.
+
+- Change the background colour based on the temperature of the forecast.
+
+- Create a login section for the users.
 
 
 
-A Weather or Not Production
+
+### A Weather or Not Production
 
 
