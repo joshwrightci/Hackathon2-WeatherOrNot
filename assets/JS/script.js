@@ -1,3 +1,5 @@
+const MapLocationDiv = document.getElementById("map");
+
 const mainWeatherSection = document.querySelector("#weatherSection");
 const cityInput = document.querySelector("#city-input");
 const searchButton = document.querySelector("#search-btn");
@@ -13,11 +15,12 @@ const API_KEY = "045a0084a08118b8ad2136beb78579bf"; //Ellis' API KEY use for TES
 const createWeatherCard = (cityName, weatherItem, index) => {
     var description = weatherItem.weather[0].description
     description = description.charAt(0).toUpperCase() + description.slice(1);
+    var dateText = new Date(weatherItem.dt_txt).toDateString(); //use dateText for date formatting options instead of dt_txt returned from API
 
     if(index === 0) {
         return `<div class="mt-3 d-flex justify-content-between">
                     <div>
-                        <h3 class="fw-bold text-center">${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h3>
+                        <h3 class="fw-bold text-center">${cityName} (${dateText})</h3>
                         <h6 class="my-3 mt-3 text-center">Temperature: ${((weatherItem.main.temp - 273.15).toFixed(2))}°C</h6>
                         <h6 class="my-3 text-center">Wind: ${weatherItem.wind.speed} M/S</h6>
                         <h6 class="my-3 text-center">Humidity: ${weatherItem.main.humidity}%</h6>
@@ -31,7 +34,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
         return `<div class="col mb-3">
                     <div class="card border-0 bg-secondary text-white forecast-wrap">
                         <div class="card-body p-3 text-white">
-                            <h5 class="card-title fw-semibold text-center">(${weatherItem.dt_txt.split(" ")[0]})</h5>
+                            <h5 class="card-title fw-semibold text-center">(${dateText})</h5>
                             <h6 class="card-text text-center">${description}</h6>
                             <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}.png" class="rounded mx-auto d-block" alt="weather icon">
                         </div>
@@ -85,10 +88,14 @@ const getCityCoordinates = () => {
         if (!data.length) return alert(`No coordinates found for ${cityName}, please check you spelling and try again.`);
         const { lat, lon, name } = data[0];
         getWeatherDetails(name, lat, lon);
+        MapLocationDiv.innerHTML = "";
+        addMapCoord (lat,lon);
         addCityToList(name);
+
     }).catch(() => {
         alert("An error occurred while fetching the coordinates!");
     });
+   
     removeHome()
 }
 // Gets User coords using built in navigator.geolocation.getCurrentPosition and uses the location information to call the API and add to the other relevant functions
@@ -102,6 +109,10 @@ const getUserCoordinates = () => {
                 const { name } = data[0];
                 getWeatherDetails(name, latitude, longitude);
                 addCityToList(name);
+                var lat = latitude;
+                var lon = longitude;
+                MapLocationDiv.innerHTML = "";
+                addMapCoord (lat,lon);
             }).catch(() => {
                 alert("An error occurred while fetching the city name!");
             });
@@ -113,6 +124,7 @@ const getUserCoordinates = () => {
                 alert("Geolocation request error. Please reset location permission.");
             }
         });
+
     removeHome()
 }
 
@@ -159,9 +171,21 @@ const removeHome = () => {
     homePage.classList.add('d-none');
 }
 
+
+
 //Add event listener
 // searchButton.addEventListener("click", () => getCityCoordinates());
 
 userLocationButton.addEventListener("click", getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
 cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
+
+
+
+
+function addMapCoord (lat,lon) {
+    const mapHTML= `<gmp-map center="${lat},${lon}" zoom="14" map-id="DEMO_MAP_ID">
+        <gmp-advanced-marker position="${lat},${lon}" title="My location"></gmp-advanced-marker>
+        </gmp-map>`;
+        MapLocationDiv.innerHTML=mapHTML;
+}
