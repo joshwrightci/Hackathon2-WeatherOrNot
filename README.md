@@ -1,6 +1,6 @@
 # Weather Or Not
 
-Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that provides Users with live weather data and forecast data. It demonstrates manipulating DOM elements with JSON from an open API. It demonstrates core Javascript that is uses to add functionality to the site. In addition, it also utilises core bootstrap, css, and HTML in regards to design.
+Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that provides Users with live weather data and forecast data. It demonstrates manipulating DOM elements with JSON from an open API, and fundamental Javascript that is uses to add functionality to the site. In addition, it also utilises core bootstrap, css, and HTML in regards to design and user experience.
 
 <img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/142e1d42-da4d-4aba-a683-342923bc8e1e" style="width:70%;">
 
@@ -31,7 +31,7 @@ Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that prov
 - As a User, I can search for the weather using my current location
   - There is a "Use my location" button that will provide a pop up asking the user to allow the use of their devices geolocation
 - As a User, I can see the forcasted weather for my searched city or my location for 5 days and the current day.
-  - There is a 
+  - There is a section for each day with the relevant information displayed in a clear and concise manner.
 - 
   - 
 - 
@@ -61,7 +61,7 @@ When the User submits a search - current or custom location - the app will displ
 - **Five Day Forecast**
 In addition to live weather, the User will receive Forecasted Weather for that location. It will provide the User with the next 6 days of weather information - combined with live weather, totals to 7 day weather data. The Forecasted Weather prediction will have minimal but crucial information - date, temperature and weather description.
 
-- **Footer?**
+- **Footer**
 
 
 
