@@ -120,15 +120,30 @@ All bug fixes were dealt with efficiently and cleanly.
 
 ### Content
 
-- 
-- 
-- 
+- Wather API Tutorial: We have used this Weather Api tutorial in the Website  [_CodingNepal_](https://www.codingnepalweb.com/wp-content/uploads/2023/06/Create-A-Weather-App-in-HTML-Bootstrap-and-JavaScript.mp4?_=1)
+
+- API: We have registred in the website [_OpenWeather_](https://openweathermap.org/).Here we generated our API KEY and used it to retrieve weather information for our web application.
+
+- JavaSript: In order to retrieve the information from the API we used JavaScript functions such us fetch() and catch().We have used them in combination with other functions in order to manipulate the information from the API.
+
+- BOOTSTRAP: For the main style format and the responsiveness of the website we have used the library [_Bootsrap_](https://getbootstrap.com/). We have used the the version 5.3.
+
+- Google Fonts: For styling purposes We have used fonts from [_Google Fonts_](https://fonts.google.com/).
+
+- CSS: We have added some lines of CSS to style specific parts of our website such as our home image. 
+
+- HTML: For the skeleton of our website we have used a basic HTML structure.
+
+
+
 
 ### Media
 
-- Favicon: we generated the image using AI IDDLE (CHAT GPT) and we formatted it with the website [_favicon.io_](https://favicon.io/favicon-converter/#google_vignette)
+- Favicon: we generated the image using OPEN AI [_DALL-E-3_](https://openai.com/dall-e-3) and we formatted it with the website [_favicon.io_](https://favicon.io/favicon-converter/#google_vignette)
 
 - Weather Icon: we used the icons provided by the API  [_OpenWeather_](https://openweathermap.org/)
+
+- Home Page Image: We have selected the image from the website  [_Clipground_](https://clipground.com/the-four-seasons-clipart.html%22)
 
 
 <a id="future-features"></a>
