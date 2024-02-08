@@ -128,16 +128,16 @@ All bug fixes were dealt with efficiently and cleanly.
 
 - Favicon: we generated the image using AI IDDLE (CHAT GPT) and we formatted it with the website [_favicon.io_](https://favicon.io/favicon-converter/#google_vignette)
 
-- 
+- Weather Icon: we used the icons provided by the API  [_OpenWeather_](https://openweathermap.org/)
 
-- 
 
 <a id="future-features"></a>
 ## Future Features
 
 There are various features and user stories that we were not able to implement due to time constraints, but would be added in future iterations of the website.
 
-
+- Interactive Map that shows your current search geographical location 
+- Change the backgroung colour based on the temperature of the forecast
 
 
 
