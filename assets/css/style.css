@@ -3,11 +3,37 @@
 * {
   font-family: 'Open Sans', sans-serif;
 }
+
+:root {
+  /* ===== Custom Colors ===== */
+  --clr-black: #040D12;
+  --clr-brown: #A27B5C;
+  --clr-lightgreen: #5c8374;
+  --clr-grey: #93b1a6;
+  /* ===== Custom Colors ===== */
+}
+
+.bgc-black {
+  background-color: var(--clr-black);
+}
+
+.bgc-dg,.btn:hover {
+  background-color: var(--clr-brown);
+}
+
+.bgc-lg {
+  background-color: var(--clr-lightgreen);
+}
+
+.bgc-grey  {
+  background-color: var(--clr-grey);
+}
+
 .current-weather img {
   max-width: 120px;
   margin-top: -15px;
 }
-
+aa
 .homeImage {
   max-width: 400px;
 }
