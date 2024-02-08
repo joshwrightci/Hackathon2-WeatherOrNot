@@ -27,12 +27,15 @@ const createWeatherCard = (cityName, weatherItem, index) => {
         return `<div class="col mb-3">
                     <div class="card border-0 bg-secondary text-white">
                         <div class="card-body p-3 text-white">
-                            <h5 class="card-title fw-semibold">(${weatherItem.dt_txt.split(" ")[0]})</h5>
-                            <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}.png" alt="weather icon">
+                            <h5 class="card-title fw-semibold">(${weatherItem.dt_txt.split(" ")[0]})</h5>  
+                            <h6>${weatherItem.weather[0].description}</h6>
+                            <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}.png" alt="weather icon">                             
+                        </div>
+                        <div class="card-body p-3 text-white">                                                                                  
                             <h6 class="card-text my-3 mt-3">Temp: ${((weatherItem.main.temp - 273.15).toFixed(2))}°C</h6>
                             <h6 class="card-text my-3">Wind: ${weatherItem.wind.speed} M/S</h6>
                             <h6 class="card-text my-3">Humidity: ${weatherItem.main.humidity}%</h6>
-                        </div>
+                        </div>                        
                     </div>
                 </div>`;
     }
@@ -107,42 +110,54 @@ const getUserCoordinates = () => {
         });
 }
 
-/*
-Function needs to take the city name, add it to a array. Take in the HTML for the li & output the array object at index0,1,2,3,4,5 etc replacing the li html
-*/
-const presentPreviousHistory = () => {
-    //Get city name
-    let cityName = city.value.trim();
-    //List for  previous city names
-    let citylist = [];
-    //Add searched for city name to list
-    citylist = citylist.push(cityName);
-    console.log(citylist);
 
-    //Get Search History names, run a loop for every object in array & output the content
-    Array.from(previousSearchHistory).forEach(function(previousSearchHistory) {
-        console.log(previousSearchHistory.textContent);
-    });
-}
 
 // Function to add city to the list
 function addCityToList() {
     // Get the text from the city search box
     var name = document.getElementById("city-input").value;
 
+    var list = document.querySelectorAll(".list-group-item");
+
+
     // Check if the input is not empty
     if (name.trim() !== "") {
+        
+       
         // Create a new list item
         var newListItem = document.createElement("li");
-        newListItem.className = "list-group-item";
-        newListItem.textContent = name;
-
+        newListItem.className = "list-group-item card border-0 bg-secondary text-white mt-3";
+       // Create capitalised version of the city name
+        var lowerName = name.toLowerCase();
+        var capName = lowerName.charAt(0).toUpperCase() + lowerName.slice(1);
+        newListItem.textContent = capName;
+        
+        // Create an empty array to be filled with list items innerHTML
+        var listArray=[];
+        // Check if list item array
+        if(listArray !== "") {
+            for (var i=0;i<list.length;i++){
+                listArray.push(list[i].innerHTML);
+        }
+        
         // Get reference to the existing ul
         var searchListUl = document.getElementById("searchList");
 
         // Append the new list item to the existing ul
-        searchListUl.appendChild(newListItem);
+        if(!listArray.includes(capName)) {
+            
+
+            searchListUl.appendChild(newListItem);
+            
+        }
     }
+    }
+}
+
+const removeHome = () => {
+    mainWeatherSection.classList.remove('d-none');
+    searchHistoryContainer.classList.remove('d-none');
+    homePage.classList.add('d-none');
 }
 
 
