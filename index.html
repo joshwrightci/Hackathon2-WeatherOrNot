@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
         <!-- SITE JS -->
     <script src="assets/JS/script.js" defer></script>
+        <!--GOOGLE MAP API-->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACVEgC6LKOwMLVnB7Aufj3Z5hYrdF6yIo&callback=console.debug&libraries=maps,marker&v=beta">
+        </script>    
   </head>
   <body> 
         <!-- MAIN HEADER -->
@@ -36,6 +39,14 @@
           <button id="search-btn" class="btn btn-success py-2 w-100 mt-3 mb-2">Search</button>
           <div class="separator"></div>
           <button id="userlocation-btn" class="btn btn-success py-2 w-100 mt-3 mb-2">Use Current Location</button>
+
+          
+          <div class="mt-3" id="map"></div>
+          <gmp-map center="35.652832,139.839478" zoom="14" map-id="DEMO_MAP_ID">
+            <gmp-advanced-marker position="35.652832,139.839478" title="My location"></gmp-advanced-marker>
+          </gmp-map>
+          
+
         </div>   
         <div class="col-xxl-9 col-md-8 mt-md-1 mt-4 pe-lg-4 text-center" id="homePage">
           <h1 class="mt-4">Welcome To Our Weather App</h1>
@@ -94,9 +105,8 @@
                   <h6 class="card-text my-3">Humidity: __%</h6>
                 </div>
               </div>
-            </div>
-            
-          </div>
+            </div>            
+          </div>          
         </div>
         <!--Previous History List -->
         <div class="container-fluid weather-data d-none" id="searchHistoryContainer">

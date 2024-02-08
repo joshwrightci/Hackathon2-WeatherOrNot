@@ -1,3 +1,5 @@
+const MapLocationDiv = document.getElementById("map");
+
 const mainWeatherSection = document.querySelector("#weatherSection");
 const cityInput = document.querySelector("#city-input");
 const searchButton = document.querySelector("#search-btn");
@@ -86,10 +88,15 @@ const getCityCoordinates = () => {
         if (!data.length) return alert(`No coordinates found for ${cityName}, please check you spelling and try again.`);
         const { lat, lon, name } = data[0];
         getWeatherDetails(name, lat, lon);
-        addCityToList();
+        addCityToList();        
+       
+    //    MapLocationDiv.innerHTML = "";
+    //     addMapCoord (lat,lon);
+
     }).catch(() => {
         alert("An error occurred while fetching the coordinates!");
     });
+   
     removeHome()
 }
 // Gets User coords using built in navigator.geolocation.getCurrentPosition and uses the location information to call the API and add to the other relevant functions
@@ -114,6 +121,7 @@ const getUserCoordinates = () => {
                 alert("Geolocation request error. Please reset location permission.");
             }
         });
+
     removeHome()
 }
 
@@ -162,9 +170,21 @@ const removeHome = () => {
     homePage.classList.add('d-none');
 }
 
+
+
 //Add event listener
 // searchButton.addEventListener("click", () => getCityCoordinates());
 
 userLocationButton.addEventListener("click", getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
 cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
+
+
+
+
+function addMapCoord (lat,lon) {
+    const mapHTML= `<gmp-map center="${lat},${lon}" zoom="14" map-id="DEMO_MAP_ID">
+        <gmp-advanced-marker position="${lat},${lon}" title="My location"></gmp-advanced-marker>
+        </gmp-map>`;
+        MapLocationDiv.innerHTML=mapHTML;
+}
