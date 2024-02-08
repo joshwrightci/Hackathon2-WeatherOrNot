@@ -85,8 +85,9 @@ const getCityCoordinates = () => {
     }).catch(() => {
         alert("An error occurred while fetching the coordinates!");
     });
+    removeHome()
 }
-
+// Gets User coords using built in navigator.geolocation.getCurrentPosition and uses the location information to call the API and add to the other relevant functions
 const getUserCoordinates = () => {
     navigator.geolocation.getCurrentPosition(
         position => {
@@ -108,6 +109,8 @@ const getUserCoordinates = () => {
                 alert("Geolocation request error. Please reset location permission.");
             }
         });
+    removeHome()
+
 }
 
 
