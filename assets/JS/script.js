@@ -4,7 +4,6 @@ const searchButton = document.querySelector("#search-btn");
 const userLocationButton = document.querySelector("#userlocation-btn");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const daysForecastDiv = document.querySelector(".days-forecast");
-// const previousSearchHistory = document.querySelectorAll("#previous-search-history li .namedhistory");
 var searchHistoryDiv = document.getElementById("searchHistory");
 const API_KEY = "045a0084a08118b8ad2136beb78579bf"; //Ellis' API KEY use for TESTING ONLY
 
@@ -86,7 +85,7 @@ const getCityCoordinates = () => {
         if (!data.length) return alert(`No coordinates found for ${cityName}, please check you spelling and try again.`);
         const { lat, lon, name } = data[0];
         getWeatherDetails(name, lat, lon);
-        addCityToList();
+        addCityToList(name);
     }).catch(() => {
         alert("An error occurred while fetching the coordinates!");
     });
@@ -102,7 +101,7 @@ const getUserCoordinates = () => {
             fetch(API_URL).then(response => response.json()).then(data => {
                 const { name } = data[0];
                 getWeatherDetails(name, latitude, longitude);
-                addCityToList();
+                addCityToList(name);
             }).catch(() => {
                 alert("An error occurred while fetching the city name!");
             });
@@ -118,10 +117,8 @@ const getUserCoordinates = () => {
 }
 
 // Function to add city to the list
-function addCityToList() {
+function addCityToList(name) {
     // Get the text from the city search box
-    var name = document.getElementById("city-input").value;
-
     var list = document.querySelectorAll(".list-group-item");
 
 
