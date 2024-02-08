@@ -4,6 +4,8 @@ const searchButton = document.querySelector("#search-btn");
 const userLocationButton = document.querySelector("#userlocation-btn");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const daysForecastDiv = document.querySelector(".days-forecast");
+// const previousSearchHistory = document.querySelectorAll("#previous-search-history li .namedhistory");
+var searchHistoryDiv = document.getElementById("searchHistory");
 const API_KEY = "045a0084a08118b8ad2136beb78579bf"; //Ellis' API KEY use for TESTING ONLY
 
 
@@ -78,10 +80,10 @@ const getCityCoordinates = () => {
         if (!data.length) return alert(`No coordinates found for ${cityName}`);
         const { lat, lon, name } = data[0];
         getWeatherDetails(name, lat, lon);
+        addCityToList();
     }).catch(() => {
         alert("An error occurred while fetching the coordinates!");
     });
-    mainWeatherSection.classList.remove('hidden');
 }
 
 const getUserCoordinates = () => {
@@ -93,6 +95,7 @@ const getUserCoordinates = () => {
             fetch(API_URL).then(response => response.json()).then(data => {
                 const { name } = data[0];
                 getWeatherDetails(name, latitude, longitude);
+                addCityToList();
             }).catch(() => {
                 alert("An error occurred while fetching the city name!");
             });
@@ -106,9 +109,50 @@ const getUserCoordinates = () => {
         });
 }
 
+/*
+Function needs to take the city name, add it to a array. Take in the HTML for the li & output the array object at index0,1,2,3,4,5 etc replacing the li html
+*/
+const presentPreviousHistory = () => {
+    //Get city name
+    let cityName = city.value.trim();
+    //List for  previous city names
+    let citylist = [];
+    //Add searched for city name to list
+    citylist = citylist.push(cityName);
+    console.log(citylist);
+
+    //Get Search History names, run a loop for every object in array & output the content
+    Array.from(previousSearchHistory).forEach(function(previousSearchHistory) {
+        console.log(previousSearchHistory.textContent);
+    });
+}
+
+// Function to add city to the list
+function addCityToList() {
+    // Get the text from the city search box
+    var name = document.getElementById("city-input").value;
+
+    // Check if the input is not empty
+    if (name.trim() !== "") {
+        // Create a new list item
+        var newListItem = document.createElement("li");
+        newListItem.className = "list-group-item";
+        newListItem.textContent = name;
+
+        // Get reference to the existing ul
+        var searchListUl = document.getElementById("searchList");
+
+        // Append the new list item to the existing ul
+        searchListUl.appendChild(newListItem);
+    }
+}
+
+
+
 //Add event listener
 // searchButton.addEventListener("click", () => getCityCoordinates());
 
 userLocationButton.addEventListener("click", getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
 cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
+// presentPreviousHistory();
