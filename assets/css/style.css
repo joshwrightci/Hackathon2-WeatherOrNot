@@ -61,10 +61,10 @@ body {
 
  /* FOOTER */
 
-
  #searchHistoryContainer{
   margin-top: 20px;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -100,12 +100,13 @@ padding: 20px 0;
 width: 100vw;
 display: flex;
 justify-content: space-evenly;
-
 }
+
 #footer-text a {
 text-decoration: none;
 color: white;
 }
+
 #footer-text a:hover {
 color: yellow;
 transition: color 0.75s;
