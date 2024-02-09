@@ -139,7 +139,7 @@ function addCityToList(name) {
        
         // Create a new list item
         var newListItem = document.createElement("li");
-        newListItem.className = "list-group-item card border-0 bgc-grey text-white mt-3 ";
+        newListItem.className = "list-group-item card border-0 bgc-dg text-white mt-3";
        // Create capitalised version of the city name
         var lowerName = name.toLowerCase();
         var capName = lowerName.charAt(0).toUpperCase() + lowerName.slice(1);
