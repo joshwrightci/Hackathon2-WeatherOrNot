@@ -2,7 +2,7 @@
 
 Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that provides Users with live weather data and forecast data. It demonstrates manipulating DOM elements with JSON from an open API, and fundamental Javascript that is used to add functionality to the site. In addition, it also utilises core Bootstrap, CSS, and HTML in regards to design and user experience.
 
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/142e1d42-da4d-4aba-a683-342923bc8e1e" style="width:70%;">
+<img src="assets/images/readmePhotos/amIResponsive1.png" style="width:70%;">
 
 # Contents
 
@@ -18,8 +18,10 @@ Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that prov
 ## UX Design
 
 ### Home Page Wireframe Design
-<img src="assets/images/readmePhotos/wireframeLaptop.png" style="width:60%;">
-<img src="assets/images/readmePhotos/wireframePhone.png" style="width:30%;">
+<img src="assets/images/readmePhotos/homePageNoLocation.webp" style="width:49%;">
+<img src="assets/images/readmePhotos/homePageLocation.webp" style="width:49%;">
+<img src="assets/images/readmePhotos/phoneHomeLocation.webp" style="width:30%;">
+<img src="assets/images/readmePhotos/phoneHomeMapLocation.webp" style="width:30%;">
 
 
 
@@ -147,6 +149,8 @@ to add extra functionality and to alter certain design choices  [_CodingNepal_](
 - Favicon: We generated the image using OPEN AI [_DALL-E-3_](https://openai.com/dall-e-3) and we formatted it with the website [_favicon.io_](https://favicon.io/favicon-converter/#google_vignette)
 
 - Weather Icon: We used the icons provided by the API  [_OpenWeather_](https://openweathermap.org/)
+
+- The icons in the header and footer were taken from [Font Awesome](https://fontawesome.com/)
 
 - Home Page Image: We selected the image from the website  [_Clipground_](https://clipground.com/the-four-seasons-clipart.html%22)
 
