@@ -2,7 +2,7 @@
 
 Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that provides Users with live weather data and forecast data. It demonstrates manipulating DOM elements with JSON from an open API, and fundamental Javascript that is used to add functionality to the site. In addition, it also utilises core Bootstrap, CSS, and HTML in regards to design and user experience.
 
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/142e1d42-da4d-4aba-a683-342923bc8e1e" style="width:70%;">
+<img src="assets/images/readmePhotos/amIResponsive1.png" style="width:70%;">
 
 # Contents
 
@@ -18,8 +18,10 @@ Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that prov
 ## UX Design
 
 ### Home Page Wireframe Design
-<img src="assets/images/readmePhotos/wireframeLaptop.png" style="width:60%;">
-<img src="assets/images/readmePhotos/wireframePhone.png" style="width:30%;">
+<img src="assets/images/readmePhotos/homePageNoLocation.webp" style="width:49%;">
+<img src="assets/images/readmePhotos/homePageLocation.webp" style="width:49%;">
+<img src="assets/images/readmePhotos/phoneHomeLocation.webp" style="width:30%;">
+<img src="assets/images/readmePhotos/phoneHomeMapLocation.webp" style="width:30%;">
 
 
 
@@ -34,10 +36,7 @@ Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that prov
   - There is a section for each day with the relevant information displayed in a clear and concise manner.
 - As a User, I will be able to explore and interactive map of the area of my choosing so that I can have an idea of what is in the area and have easy access to potential activities in the area
   - We have provided an interactive map from Google's map API that will change to the relevant city when a search is executed by the user, or the user's geolocation is used.
-- 
-  - 
-- 
-  - 
+
 
 As can be seen from the project board, the sprint was composed of 14 separate items. Having used the MoSCoW approach to prioritisation, 8 were classified as "Must-Have" making up less than 60% of the tasks as recommended. The rest of the first sprint was made up of "Should-Have", "Nice to Have".
 
@@ -49,22 +48,38 @@ As can be seen from the project board, the sprint was composed of 14 separate it
 - **Search Bar**
 The User can instead, enter their own custom location into the Input. Once they click search, the weather API will return weather data for that location.
 
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/6278e0e9-371f-4190-8527-9988f7a4d5c4" style="width:70%;">
+<img src="assets/images/readmePhotos/searchBar.png" style="width:25%;">
 
 - **User Location Button**
 The User can click the current location button which uses the Geolocation API, the browser will then ask the User permission to access their device's location. Once that is accepted, the weather results shown will be for that location - using latitude and longitude of the User's device.
 
+<img src="assets/images/readmePhotos/currentLocation.png" style="width:40%;">
+
+
 - **Live Weather**
 When the User submits a search - current or custom location - the app will display a live weather container. This live weather will have key information about the location. This includes Temperature, Humidity, Wind Speed, Sunrise, Sunset and a description of the weather e.g Cloudy.
+
+<img src="assets/images/readmePhotos/liveWeather.png" style="width:50%;">
 
 - **Five Day Forecast**
 In addition to live weather, the User will receive Forecasted Weather for that location. It will provide the User with the next 6 days of weather information - combined with live weather, totals to 7 day weather data. The Forecasted Weather prediction will have minimal but crucial information - date, temperature and weather description.
 
+<img src="assets/images/readmePhotos/fiveDayForecast.png" style="width:70%;">
+
+- **Previous Searches**
+As an extra feature, previous searches can be checked by the user on the section Previous Searches, where they will appear organised on a list.
+
+<img src="assets/images/readmePhotos/previousSearches.png" style="width:50%;">
+
 - **Interactive Map**
 When a city is input by the user or the user location is used to execute a search along with the relevant weather informaotion, an interactive map of that location will be displayed below the main section allowing the user to have a browse around the local area, zoom in and out etc. This is generated with Google's map API.
 
+<img src="assets/images/readmePhotos/map.png" style="width:70%;">
+
 - **Footer**
 At the bottom of the page we have a fairly standard footer section that includes links to each our the collaborators Github pages for the user to checkout. 
+
+     <img src="assets/images/readmePhotos/footer.png" style="width:70%;">
 
 
 
@@ -72,29 +87,32 @@ At the bottom of the page we have a fairly standard footer section that includes
 ## Testing
 
 ### Manual Testing
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/c0e89b6c-78a8-42a2-8b48-bc6b39ac513e" style="width:100%;">
+<img src="assets/images/readmePhotos/manualTesting.webp" style="width:80%;">
 
 ### Lighthouse
 The site was tested using Lighthouse with the following results:
 
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/ed031055-ecac-4a09-93e0-d9710011e550" style="width:70%;">
+<img src="assets/images/readmePhotos/lightHouse.png" style="width:100%;">
 
 
 ### Responsive Testing
 
 Alongside the built in Bootstrap responsive CSS, media queries were used throughout our own CSS to provide a consistent user experience. Chrome dev tools were used frequently to test the site at standard screen sizes and the site was manually viewed on laptops, tablets and phones.
 
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/216eaf29-7853-4fe9-b3e1-4ed9ff705c84" style="width:70%;">
+<img src="assets/images/readmePhotos/amIResponsive1.png" style="width:70%;">
 
 
 ### Browser Compatibility
 The site was tested on the following browsers:
-- Chrome
+- Opera
 - Firefox
 - Edge
-- Opera
+- Chrome
 
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/2104c398-4375-40d0-af15-25cba812c33e" style="width:70%;">
+
+
+
+<img src="assets/images/readmePhotos/browser.png" style="width:100%;">
 
 
 ### Validator Testing
@@ -102,15 +120,19 @@ The site was tested on the following browsers:
 - HTML
 
   - No errors were returned when passing through the official [_W3C validator_](https://validator.w3.org/nu/?doc=https://mbriscoe.github.io/Ethereal-Expressions)
+  
+<img src="assets/images/readmePhotos/htmlValidation.webp" style="width:80%;">
 
 - CSS
   - No errors were found with our own CSS code when passing through the official Jigsaw validator. However, there were many errors found in the Bootstrap CSS code, which is a normal result.
 
+<img src="assets/images/readmePhotos/cssValidation.webp" style="width:80%;">
+
 ## Bugs
 All bug fixes were dealt with efficiently and cleanly.
-- BUG: contact page width issue
-- BUG: Footer overlapping content
-- BUG: Shading display on gallery page
+- BUG: 
+- BUG: 
+- BUG: 
 
 <a id="deployment"></a>
 ## Deployment
@@ -133,7 +155,9 @@ to add extra functionality and to alter certain design choices  [_CodingNepal_](
 
 - BOOTSTRAP: For the main style format and the responsiveness of the website we have used the library [_Bootsrap_](https://getbootstrap.com/). We have used the most recent version 5.3.2
 
-- Google Fonts: For styling purposes We have used fonts from [_Google Fonts_](https://fonts.google.com/) (https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap').
+- Photo Editor: For editing our browser photos and testing photos we have used the online editor [_Canva_](https://www.canva.com/en_gb/).
+
+- Google Fonts: For styling purposes We have used fonts from  [_Google Fonts_](https://fonts.google.com/).
 
 - CSS: We have added some lines of CSS to style specific parts of our website such as our home image, weather cards, and buttons etc.
 
@@ -148,7 +172,11 @@ to add extra functionality and to alter certain design choices  [_CodingNepal_](
 
 - Weather Icon: We used the icons provided by the API  [_OpenWeather_](https://openweathermap.org/)
 
+- The icons in the header and footer were taken from [Font Awesome](https://fontawesome.com/)
+
 - Home Page Image: We selected the image from the website  [_Clipground_](https://clipground.com/the-four-seasons-clipart.html%22)
+
+
 
 
 <a id="future-features"></a>
