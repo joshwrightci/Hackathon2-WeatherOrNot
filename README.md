@@ -1,6 +1,6 @@
 # Weather Or Not
 
-Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that provides Users with live weather data and forecast data. It demonstrates manipulating DOM elements with JSON from an open API, and fundamental Javascript that is uses to add functionality to the site. In addition, it also utilises core bootstrap, css, and HTML in regards to design and user experience.
+Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that provides Users with live weather data and forecast data. It demonstrates manipulating DOM elements with JSON from an open API, and fundamental Javascript that is used to add functionality to the site. In addition, it also utilises core Bootstrap, CSS, and HTML in regards to design and user experience.
 
 <img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/142e1d42-da4d-4aba-a683-342923bc8e1e" style="width:70%;">
 
@@ -32,8 +32,8 @@ Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that prov
   - There is a "Use my location" button that will provide a pop up asking the user to allow the use of their devices geolocation
 - As a User, I can see the forcasted weather for my searched city or my location for 5 days and the current day.
   - There is a section for each day with the relevant information displayed in a clear and concise manner.
-- 
-  - 
+- As a User, I will be able to explore and interactive map of the area of my choosing so that I can have an idea of what is in the area and have easy access to potential activities in the area
+  - We have provided an interactive map from Google's map API that will change to the relevant city when a search is executed by the user, or the user's geolocation is used.
 - 
   - 
 - 
@@ -60,8 +60,11 @@ When the User submits a search - current or custom location - the app will displ
 - **Five Day Forecast**
 In addition to live weather, the User will receive Forecasted Weather for that location. It will provide the User with the next 6 days of weather information - combined with live weather, totals to 7 day weather data. The Forecasted Weather prediction will have minimal but crucial information - date, temperature and weather description.
 
-- **Footer**
+- **Interactive Map**
+When a city is input by the user or the user location is used to execute a search along with the relevant weather informaotion, an interactive map of that location will be displayed below the main section allowing the user to have a browse around the local area, zoom in and out etc. This is generated with Google's map API.
 
+- **Footer**
+At the bottom of the page we have a fairly standard footer section that includes links to each our the collaborators Github pages for the user to checkout. 
 
 
 
@@ -73,6 +76,7 @@ In addition to live weather, the User will receive Forecasted Weather for that l
 
 ### Lighthouse
 The site was tested using Lighthouse with the following results:
+
 <img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/ed031055-ecac-4a09-93e0-d9710011e550" style="width:70%;">
 
 
@@ -89,6 +93,7 @@ The site was tested on the following browsers:
 - Firefox
 - Edge
 - Opera
+
 <img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/2104c398-4375-40d0-af15-25cba812c33e" style="width:70%;">
 
 
@@ -110,26 +115,27 @@ All bug fixes were dealt with efficiently and cleanly.
 <a id="deployment"></a>
 ## Deployment
 
-- The site was deployed to GitHub pages from the main branch of the repository early in the developemnt stage for continuous deployment and checking.
+- The site was deployed to GitHub pages from the main branch of the repository during the developemnt stage for continuous deployment and checking.
 
-- The live link can be found [_here_](https://mbriscoe.github.io/Ethereal-Expressions/)
+- The live link can be found [_here_](https://joshwrightci.github.io/Hackathon2-WeatherOrNot/)
 
 <a id="credits"></a>
 ## Credits
 
 ### Content
 
-- Wather API Tutorial: We have used this Weather Api tutorial in the Website  [_CodingNepal_](https://www.codingnepalweb.com/wp-content/uploads/2023/06/Create-A-Weather-App-in-HTML-Bootstrap-and-JavaScript.mp4?_=1)
+- Weather API Tutorial: We used this tutorial to produce the initial MVP then modified and added our own Javascript,HTML and CSS 
+to add extra functionality and to alter certain design choices  [_CodingNepal_](https://www.codingnepalweb.com/wp-content/uploads/2023/06/Create-A-Weather-App-in-HTML-Bootstrap-and-JavaScript.mp4?_=1)
 
-- API: We have registred in the website [_OpenWeather_](https://openweathermap.org/).Here we generated our API KEY and used it to retrieve weather information for our web application.
+- API: We have registred in the website [_OpenWeather_](https://openweathermap.org/). Here we generated our API KEY and used it to retrieve weather information for our web application.
 
 - JavaSript: In order to retrieve the information from the API we used JavaScript functions such us fetch() and catch().We have used them in combination with other functions in order to manipulate the information from the API.
 
-- BOOTSTRAP: For the main style format and the responsiveness of the website we have used the library [_Bootsrap_](https://getbootstrap.com/). We have used the the version 5.3.
+- BOOTSTRAP: For the main style format and the responsiveness of the website we have used the library [_Bootsrap_](https://getbootstrap.com/). We have used the most recent version 5.3.2
 
-- Google Fonts: For styling purposes We have used fonts from [_Google Fonts_](https://fonts.google.com/).
+- Google Fonts: For styling purposes We have used fonts from [_Google Fonts_](https://fonts.google.com/) (https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap').
 
-- CSS: We have added some lines of CSS to style specific parts of our website such as our home image. 
+- CSS: We have added some lines of CSS to style specific parts of our website such as our home image, weather cards, and buttons etc.
 
 - HTML: For the skeleton of our website we have used a basic HTML structure.
 
@@ -138,11 +144,11 @@ All bug fixes were dealt with efficiently and cleanly.
 
 ### Media
 
-- Favicon: we generated the image using OPEN AI [_DALL-E-3_](https://openai.com/dall-e-3) and we formatted it with the website [_favicon.io_](https://favicon.io/favicon-converter/#google_vignette)
+- Favicon: We generated the image using OPEN AI [_DALL-E-3_](https://openai.com/dall-e-3) and we formatted it with the website [_favicon.io_](https://favicon.io/favicon-converter/#google_vignette)
 
-- Weather Icon: we used the icons provided by the API  [_OpenWeather_](https://openweathermap.org/)
+- Weather Icon: We used the icons provided by the API  [_OpenWeather_](https://openweathermap.org/)
 
-- Home Page Image: We have selected the image from the website  [_Clipground_](https://clipground.com/the-four-seasons-clipart.html%22)
+- Home Page Image: We selected the image from the website  [_Clipground_](https://clipground.com/the-four-seasons-clipart.html%22)
 
 
 <a id="future-features"></a>
@@ -150,17 +156,14 @@ All bug fixes were dealt with efficiently and cleanly.
 
 There are various features and user stories that we were not able to implement due to time constraints, but would be added in future iterations of the website.
 
-- Interactive Map that shows your current search geographical location.
 
 - Make previous search clickable to allow the users visit the weather information of their previous searches.
 
 - Change the background colour based on the temperature of the forecast.
 
-- Create a login section for the users.
+- Create a login section for the users that will store previous searches etc.
 
 
 
 
 ### A Weather or Not Production
-
-
