@@ -1,5 +1,4 @@
 const MapLocationDiv = document.getElementById("map");
-
 const mainWeatherSection = document.querySelector("#weatherSection");
 const mainWeatherSection2 = document.querySelector("#weatherSection2");
 const cityInput = document.querySelector("#city-input");
@@ -9,8 +8,6 @@ const currentWeatherDiv = document.querySelector(".current-weather");
 const daysForecastDiv = document.querySelector(".days-forecast");
 var searchHistoryDiv = document.getElementById("searchHistory");
 const API_KEY = "045a0084a08118b8ad2136beb78579bf"; //Ellis' API KEY use for TESTING ONLY
-
-
 
 // Create weather card HTML based on weather data
 const createWeatherCard = (cityName, weatherItem, index) => {
@@ -33,7 +30,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
                 </div>`;
     } else {
         return `<div class="col mb-3">
-                    <div class="card border-0 bg-secondary text-white forecast-wrap">
+                    <div class="card border-0 bgc-grey text-white forecast-wrap">
                         <div class="card-body p-3 text-white">
                             <h5 class="card-title fw-semibold text-center">(${dateText})</h5>
                             <h6 class="card-text text-center">${description}</h6>
@@ -99,6 +96,7 @@ const getCityCoordinates = () => {
    
     removeHome()
 }
+
 // Gets User coords using built in navigator.geolocation.getCurrentPosition and uses the location information to call the API and add to the other relevant functions
 const getUserCoordinates = () => {
     navigator.geolocation.getCurrentPosition(
@@ -141,7 +139,7 @@ function addCityToList(name) {
        
         // Create a new list item
         var newListItem = document.createElement("li");
-        newListItem.className = "list-group-item card border-0 bg-secondary text-white mt-3";
+        newListItem.className = "list-group-item card border-0 bgc-grey text-white mt-3 ";
        // Create capitalised version of the city name
         var lowerName = name.toLowerCase();
         var capName = lowerName.charAt(0).toUpperCase() + lowerName.slice(1);
@@ -168,7 +166,6 @@ function addCityToList(name) {
 }
 
 // A function that removes or adds the d-none class to hide the homepage section and reveal  the weather section
-
 const removeHome = () => {
     mainWeatherSection.classList.remove('d-none');
     mainWeatherSection2.classList.remove('d-none');
@@ -178,7 +175,6 @@ const removeHome = () => {
 
 // Add function that takes the relevant city latitude and longitude coordinates 
 // and passes them into a template literal that is then inserted into the innerhtml or the map div.
-
 function addMapCoord (lat,lon) {
     const mapHTML= `<gmp-map center="${lat},${lon}" zoom="14" map-id="DEMO_MAP_ID">
         <gmp-advanced-marker position="${lat},${lon}" title="My location"></gmp-advanced-marker>
@@ -187,8 +183,6 @@ function addMapCoord (lat,lon) {
 }
 
 //Add event listener
-
-
 userLocationButton.addEventListener("click", getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
 cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
