@@ -51,22 +51,38 @@ As can be seen from the project board, the sprint was composed of 14 separate it
 - **Search Bar**
 The User can instead, enter their own custom location into the Input. Once they click search, the weather API will return weather data for that location.
 
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/6278e0e9-371f-4190-8527-9988f7a4d5c4" style="width:70%;">
+<img src="assets/images/readmePhotos/searchBar.png" style="width:25%;">
 
 - **User Location Button**
 The User can click the current location button which uses the Geolocation API, the browser will then ask the User permission to access their device's location. Once that is accepted, the weather results shown will be for that location - using latitude and longitude of the User's device.
 
+<img src="assets/images/readmePhotos/currentLocation.png" style="width:40%;">
+
+
 - **Live Weather**
 When the User submits a search - current or custom location - the app will display a live weather container. This live weather will have key information about the location. This includes Temperature, Humidity, Wind Speed, Sunrise, Sunset and a description of the weather e.g Cloudy.
+
+<img src="assets/images/readmePhotos/liveWeather.png" style="width:50%;">
 
 - **Five Day Forecast**
 In addition to live weather, the User will receive Forecasted Weather for that location. It will provide the User with the next 6 days of weather information - combined with live weather, totals to 7 day weather data. The Forecasted Weather prediction will have minimal but crucial information - date, temperature and weather description.
 
+<img src="assets/images/readmePhotos/fiveDayForecast.png" style="width:70%;">
+
+- **Previous Searches**
+As an extra feature, previous searches can be checked by the user on the section Previous Searches, where they will appear organised on a list.
+
+<img src="assets/images/readmePhotos/previousSearches.png" style="width:50%;">
+
 - **Interactive Map**
 When a city is input by the user or the user location is used to execute a search along with the relevant weather informaotion, an interactive map of that location will be displayed below the main section allowing the user to have a browse around the local area, zoom in and out etc. This is generated with Google's map API.
 
+<img src="assets/images/readmePhotos/map.png" style="width:70%;">
+
 - **Footer**
 At the bottom of the page we have a fairly standard footer section that includes links to each our the collaborators Github pages for the user to checkout. 
+
+     <img src="assets/images/readmePhotos/footer.png" style="width:70%;">
 
 
 
@@ -74,7 +90,7 @@ At the bottom of the page we have a fairly standard footer section that includes
 ## Testing
 
 ### Manual Testing
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/c0e89b6c-78a8-42a2-8b48-bc6b39ac513e" style="width:100%;">
+<img src="assets/images/readmePhotos/manualTesting.webp" style="width:80%;">
 
 ### Lighthouse
 The site was tested using Lighthouse with the following results:
