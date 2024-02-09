@@ -36,10 +36,7 @@ Weather Or Not - Hackathon Project #2 - is a Front-end Web Application that prov
   - There is a section for each day with the relevant information displayed in a clear and concise manner.
 - As a User, I will be able to explore and interactive map of the area of my choosing so that I can have an idea of what is in the area and have easy access to potential activities in the area
   - We have provided an interactive map from Google's map API that will change to the relevant city when a search is executed by the user, or the user's geolocation is used.
-- 
-  - 
-- 
-  - 
+
 
 As can be seen from the project board, the sprint was composed of 14 separate items. Having used the MoSCoW approach to prioritisation, 8 were classified as "Must-Have" making up less than 60% of the tasks as recommended. The rest of the first sprint was made up of "Should-Have", "Nice to Have".
 
@@ -95,24 +92,27 @@ At the bottom of the page we have a fairly standard footer section that includes
 ### Lighthouse
 The site was tested using Lighthouse with the following results:
 
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/ed031055-ecac-4a09-93e0-d9710011e550" style="width:70%;">
+<img src="assets/images/readmePhotos/lightHouse.png" style="width:100%;">
 
 
 ### Responsive Testing
 
 Alongside the built in Bootstrap responsive CSS, media queries were used throughout our own CSS to provide a consistent user experience. Chrome dev tools were used frequently to test the site at standard screen sizes and the site was manually viewed on laptops, tablets and phones.
 
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/216eaf29-7853-4fe9-b3e1-4ed9ff705c84" style="width:70%;">
+<img src="assets/images/readmePhotos/amIResponsive1.png" style="width:70%;">
 
 
 ### Browser Compatibility
 The site was tested on the following browsers:
-- Chrome
+- Opera
 - Firefox
 - Edge
-- Opera
+- Chrome
 
-<img src="https://github.com/mbriscoe/Ethereal-Expressions/assets/86828720/2104c398-4375-40d0-af15-25cba812c33e" style="width:70%;">
+
+
+
+<img src="assets/images/readmePhotos/browser.png" style="width:100%;">
 
 
 ### Validator Testing
@@ -120,15 +120,19 @@ The site was tested on the following browsers:
 - HTML
 
   - No errors were returned when passing through the official [_W3C validator_](https://validator.w3.org/nu/?doc=https://mbriscoe.github.io/Ethereal-Expressions)
+  
+<img src="assets/images/readmePhotos/htmlValidation.webp" style="width:80%;">
 
 - CSS
   - No errors were found with our own CSS code when passing through the official Jigsaw validator. However, there were many errors found in the Bootstrap CSS code, which is a normal result.
 
+<img src="assets/images/readmePhotos/cssValidation.webp" style="width:80%;">
+
 ## Bugs
 All bug fixes were dealt with efficiently and cleanly.
-- BUG: contact page width issue
-- BUG: Footer overlapping content
-- BUG: Shading display on gallery page
+- BUG: 
+- BUG: 
+- BUG: 
 
 <a id="deployment"></a>
 ## Deployment
@@ -151,7 +155,9 @@ to add extra functionality and to alter certain design choices  [_CodingNepal_](
 
 - BOOTSTRAP: For the main style format and the responsiveness of the website we have used the library [_Bootsrap_](https://getbootstrap.com/). We have used the most recent version 5.3.2
 
-- Google Fonts: For styling purposes We have used fonts from [_Google Fonts_](https://fonts.google.com/) (https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap').
+- Photo Editor: For editing our browser photos and testing photos we have used the online editor [_Canva_](https://www.canva.com/en_gb/).
+
+- Google Fonts: For styling purposes We have used fonts from  [_Google Fonts_](https://fonts.google.com/).
 
 - CSS: We have added some lines of CSS to style specific parts of our website such as our home image, weather cards, and buttons etc.
 
@@ -169,6 +175,8 @@ to add extra functionality and to alter certain design choices  [_CodingNepal_](
 - The icons in the header and footer were taken from [Font Awesome](https://fontawesome.com/)
 
 - Home Page Image: We selected the image from the website  [_Clipground_](https://clipground.com/the-four-seasons-clipart.html%22)
+
+
 
 
 <a id="future-features"></a>
