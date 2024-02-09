@@ -130,9 +130,8 @@ The site was tested on the following browsers:
 
 ## Bugs
 All bug fixes were dealt with efficiently and cleanly.
-- BUG: 
-- BUG: 
-- BUG: 
+- BUG: Map not display the desired size, needs more height
+- BUG: If user denies access to location it takes you to a page with no weather information and empty containers rather than returning to home page
 
 <a id="deployment"></a>
 ## Deployment
@@ -191,7 +190,7 @@ There are various features and user stories that we were not able to implement d
 
 - Create a login section for the users that will store previous searches etc.
 
-
+- Add more specificity to search function so that city names that appear in various countries will give a dropdown suggestion so the user can pick which one they want.
 
 
 ### A Weather or Not Production
