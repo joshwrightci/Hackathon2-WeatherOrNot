@@ -33,9 +33,10 @@
   max-width: 120px;
   margin-top: -15px;
 }
-aa
+
 .homeImage {
-  max-width: 400px;
+  max-width: 400px !important;
+  max-height:400px !important;
 }
 
 .forecast-wrap {
